@@ -26,5 +26,9 @@
             android:name=".StudentDetailsActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".StudentEditDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight" />
     </application>
 </manifest>
