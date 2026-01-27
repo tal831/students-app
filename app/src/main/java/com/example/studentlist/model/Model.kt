@@ -1,8 +1,5 @@
 package com.example.studentlist.model
 
-import java.util.stream.IntStream
-import java.util.stream.Stream
-
 class Model private constructor() {
     val students: MutableList<Student> = ArrayList()
 
@@ -22,5 +19,13 @@ class Model private constructor() {
                     false
                 )
             }.forEach { s -> students.add(s) }
+    }
+
+    fun remove(index: Int) {
+        students.removeAt(index)
+    }
+
+    fun get(index: Int): Student {
+        return students[index]
     }
 }
