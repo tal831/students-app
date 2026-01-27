@@ -28,4 +28,8 @@ class Model private constructor() {
     fun get(index: Int): Student {
         return students[index]
     }
+
+    fun add(student: Student) {
+        students.add(student)
+    }
 }
