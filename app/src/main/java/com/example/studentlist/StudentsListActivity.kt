@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -47,6 +48,11 @@ class StudentsListActivity : AppCompatActivity() {
             }
         }
 
+        val createButton: Button = findViewById(R.id.students_create_button)
+        createButton.setOnClickListener {
+            val intent = Intent(applicationContext, AddStudentActivity::class.java)
+            startForResult.launch(intent)
+        }
         adapter.listener = object : OnItemClickListener {
             override fun onItemClick(position: Int) {
                 val intent = Intent(applicationContext, StudentDetailsActivity::class.java)
